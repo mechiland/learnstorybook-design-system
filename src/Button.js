@@ -38,7 +38,7 @@ const StyledButton = styled.button`
   cursor: pointer;
   display: inline-block;
   overflow: hidden;
-  padding: ${props => (props.size === SIZES.SMALL ? '8px 16px' : '13px 20px')};
+  padding: ${props => (props.size === SIZES.SMALL ? "8px 16px" : "13px 20px")};
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -50,11 +50,15 @@ const StyledButton = styled.button`
   opacity: 1;
   margin: 0;
   background: transparent;
+  
 
 
-  font-size: ${props => (props.size === SIZES.SMALL ? typography.size.s1 : typography.size.s2)}px;
+  font-size: ${props =>
+    props.size === SIZES.SMALL ? typography.size.s1 : typography.size.s2}px;
   font-weight: ${typography.weight.extrabold};
   line-height: 1;
+  border: 10px solid red;
+  font-size: 20px;
 
   ${props =>
     !props.isLoading &&
@@ -88,12 +92,12 @@ const StyledButton = styled.button`
   }
 
   svg {
-    height: ${props => (props.size === SIZES.SMALL ? '14' : '16')}px;
-    width: ${props => (props.size === SIZES.SMALL ? '14' : '16')}px;
+    height: ${props => (props.size === SIZES.SMALL ? "14" : "16")}px;
+    width: ${props => (props.size === SIZES.SMALL ? "14" : "16")}px;
     vertical-align: top;
-    margin-right: ${props => (props.size === SIZES.SMALL ? '4' : '6')}px;
-    margin-top: ${props => (props.size === SIZES.SMALL ? '-1' : '-2')}px;
-    margin-bottom: ${props => (props.size === SIZES.SMALL ? '-1' : '-2')}px;
+    margin-right: ${props => (props.size === SIZES.SMALL ? "4" : "6")}px;
+    margin-top: ${props => (props.size === SIZES.SMALL ? "-1" : "-2")}px;
+    margin-bottom: ${props => (props.size === SIZES.SMALL ? "-1" : "-2")}px;
 
     /* Necessary for js mouse events to not glitch out when hovering on svgs */
     pointer-events: none;
@@ -148,7 +152,7 @@ const StyledButton = styled.button`
         display: block;
         margin: 0;
       }
-      padding: ${props.size === SIZES.SMALL ? '7' : '12'}px;
+      padding: ${props.size === SIZES.SMALL ? "7" : "12"}px;
     `}
 
   ${props =>
@@ -270,10 +274,16 @@ const StyledButton = styled.button`
           color: ${color.lightest};
         }
         &:focus {
-          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(color.primary, 0.4)} 0 1px 9px 2px;
+          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(
+        color.primary,
+        0.4
+      )} 0 1px 9px 2px;
         }
         &:focus:hover {
-          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(color.primary, 0.2)} 0 8px 18px 0px;
+          box-shadow: ${color.primary} 0 0 0 1px inset, ${rgba(
+        color.primary,
+        0.2
+      )} 0 8px 18px 0px;
         }
       `};
 
